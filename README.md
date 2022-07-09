@@ -7,7 +7,7 @@ Checking whether one number is between two others is a frequent task in any
 programming language. However, JavaScript’s comparison operators only supports
 checking the order between two values at a time, resulting in code that looks
 like `x <= y && y < z`. A function that allows checking whether `y` is in
-between `x` and `y` would be useful for many developers.
+between `x` and `z` would be useful for many developers.
 
 We therefore propose exploring the addition of a number-interval predicate to
 the JavaScript language. If this proposal is approved for Stage 1, then we
