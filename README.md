@@ -1,4 +1,4 @@
-# `Math.ordered` for JavaScript
+# Number-Interval Predicate for JavaScript
 ECMAScript Stage-0 Proposal. J. S. Choi, 2021.
 
 ## Description
