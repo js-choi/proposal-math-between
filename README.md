@@ -25,13 +25,6 @@ maximum:
 Math.isBetween(2, 0, 6);
 ```
 
-We could have a function that *always* uses an inclusive minimum and exclusive
-maximum:
-```js
-// 0 ≤ 2 < 6:
-Math.isBetween(2, 0, 6);
-```
-
 …or the same except it would always use an inclusive minimum and inclusive
 maximum:
 ```js
