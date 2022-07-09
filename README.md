@@ -45,8 +45,8 @@ Math.isBetween(2, 0, 6, false, false);
 Math.isBetween(2, 0, 6, false, true);
 ```
 
-(The default values of the boolean arguments might be both true, or false and true,
-or something else.
+(The boolean arguments might be required, or they might be optional with
+their default values being both true, or false and true, or something else.
 
 [Google Sheets’ `ISBETWEEN`]: https://support.google.com/docs/answer/10538337?hl=en
 
