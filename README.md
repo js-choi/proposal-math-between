@@ -33,8 +33,7 @@ Math.isBetween(2, 0, 6);
 ```
 
 We could have a function that also takes two boolean arguments indicating their
-respective limits’ inclusivity, like [Google Sheets’ `ISBETWEEN`][] (their
-defaults might both be inclusive or inclusive–exclusive):
+respective limits’ inclusivity, like [Google Sheets’ `ISBETWEEN`][]:
 ```js
 // 0 ≤ 2 < 6:
 Math.isBetween(2, 0, 6, true, false);
@@ -45,6 +44,9 @@ Math.isBetween(2, 0, 6, false, false);
 // 0 < 2 ≤ 6:
 Math.isBetween(2, 0, 6, false, true);
 ```
+
+(The default values of the boolean arguments might be both true, or false and true,
+or something else.
 
 [Google Sheets’ `ISBETWEEN`]: https://support.google.com/docs/answer/10538337?hl=en
 
