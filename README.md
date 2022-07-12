@@ -16,8 +16,39 @@ as many real-world use cases as possible and shape our design to fulfill them.
 
 ## Description
 There are several possible ways to do this, all of which would be static
-functions on the Math constructor:
+functions on the Math constructor.
 
+### Option A: isIncreasing
+We could have a variadic function checking for ascending monotonicity, with
+inclusive limits:
+```js
+// 0 ≤ 2 ≤ 3 ≤ 6:
+Math.isIncreasing(0, 2, 3, 6);
+```
+
+…or the same, except with exclusive limits:
+```js
+// 0 < 2 < 3 < 6:
+Math.isIncreasing(0, 2, 3, 6);
+```
+
+…or with an extra boolean argument for configuration:
+```js
+// 0 ≤ 2 ≤ 3 ≤ 6:
+Math.isIncreasing([ 0, 2, 3, 6 ], true);
+// 0 < 2 < 3 < 6:
+Math.isIncreasing([ 0, 2, 3, 6 ], false);
+```
+
+…or we could separate inclusive and exclusive limits into separate functions:
+```js
+// 0 ≤ 2 ≤ 3 ≤ 6:
+Math.isIncreasing(0, 2, 3, 6);
+// 0 < 2 < 3 < 6:
+Math.isStrictlyIncreasing(0, 2, 3, 6);
+```
+
+### Option B: isBetween
 We could have a function that *always* uses an inclusive minimum and exclusive
 maximum:
 ```js
@@ -61,27 +92,4 @@ Math.isBetweenII(2, 0, 6);
 Math.isBetweenEE(2, 0, 6);
 // 0 < 2 ≤ 6:
 Math.isBetweenEI(2, 0, 6);
-```
-
-***
-
-We could have a variadic function checking for ascending monotonicity, with
-inclusive limits:
-```js
-// 0 ≤ 2 ≤ 3 ≤ 6:
-Math.isIncreasing(0, 2, 3, 6);
-```
-
-…or the same, except with exclusive limits:
-```js
-// 0 < 2 < 3 < 6:
-Math.isIncreasing(0, 2, 3, 6);
-```
-
-…or with an extra boolean argument for configuration:
-```js
-// 0 ≤ 2 ≤ 3 ≤ 6:
-Math.isIncreasing([ 0, 2, 3, 6 ], true);
-// 0 < 2 < 3 < 6:
-Math.isIncreasing([ 0, 2, 3, 6 ], false);
 ```
